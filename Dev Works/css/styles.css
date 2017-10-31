@@ -1,0 +1,74 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+
+input[name=search]{
+	width: 130px;
+	border:none;
+	border-left: none;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px;
+
+}
+input[name=search]:focus{
+	width: 200px;
+	border-color: white !important;
+}
+
+.search-btn{
+	background-color: white;
+	border: none;
+	color: brown;
+	height: 34px;
+	padding: 5px;
+}
+.search-btn:hover{
+	background-color: brown;
+	color:white;
+}
+.search-input{
+	background-color: white;
+	padding: 0px;
+}
+.search-input>button{
+	background-color: white;
+	border: none;
+}
+.bg-orange{
+	background-color: orange;	
+}
+.dropdown{
+	border: none;
+	padding: 5px;
+	color: brown;
+}
+.dropdown:focus{
+	border: none;
+}
+button[class=reg]{
+	background-color: transparent;
+    border: none;
+    color: brown;
+
+}
+button[class=reg]:hover{
+	background-color: white;
+	color: brown;
+	padding: 10px;
+}
+.login:hover{
+	background-color: white;
+	color: brown;
+}
+button[class=login]{
+	background-color: transparent;
+    border: none;
+    color: brown;
+    padding: 10px;
+}

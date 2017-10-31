@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>MakersOD</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"> 
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+
+<!--end slider -->
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html" class="brand"><h3><b>MakersOD</b></h3></a>
+					 </div>
+					 <div class="menu">
+							<a class="bar" onclick="openNav()"><i class="fa fa-2x fa-bars bar-nav"></i></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="shop.html">Products</a></li>
+						    	<li><a href="team.html">Makers</a></li>
+						    	<li><a href="experiance.html">Suppliers</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	    	    <div class="reg-btns">
+	    	    	<button class="login">Log in</button>
+				    <button class="reg">Register</button>
+				</div>
+				<div id="mySidenav" class="sidenav">
+					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					  <div>
+					  	<img src="images/pic8.jpg" class="circular" alt="Profile picture">
+					  	<p class="text-center sidenav-user">User Ajalankoko</p>
+					  </div>
+					  <div>
+					  <a href="#">Products</a>
+					  <a href="#">Makers</a>
+					  <a href="#">Suppliers</a>
+					  <a href="#">Log in</a>
+					  <a href="#">Register</a>
+					</div>
+				</div>
+
+
+	            <div class="header_right">
+	            
+	    		  <!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+					</div>
+				</div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+
+
+	  <div class="main" style="min-height: 500px;">
+	  	
+	  	<div class="container">
+	  	<form method="get" class="">
+	  	<div class=" col-md-6 col-sm-4">
+	  		<input type="text" name="" class="form-control" placeholder="Search for Products, Makers, Suppliers.....">
+	  	</div>
+	  	<div class=" col-md-3 search-lit col-sm-4">
+	  		<select class="sel-opt">
+	  			<option>Products</option>
+	  			<option>Makers</option>
+	  			<option>Suppliers</option>
+	  		</select>
+	  	</div>
+	  	<div class=" col-md-3 search-lit col-sm-4">
+	  		<button class="sel-btn">
+	  			Search
+	  		</button>
+	  	</div>
+	  	</form>
+	  </div>
+
+	  </div>
+
+	  <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Products</h4>
+							<li><a href="#">Mens</a></li>
+							<li><a href="#">Womens</a></li>
+							<li><a href="#">Youth</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>About</h4>
+							<li><a href="#">Careers and internships</a></li>
+							<li><a href="#">Sponserships</a></li>
+							<li><a href="#">team</a></li>
+							<li><a href="#">Catalog Request/Download</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Shipping and Order Tracking</a></li>
+							<li><a href="#">Easy Returns</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Replacement Binding Parts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   					
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© 2017 MakersOD by <a href="http://w3layouts.com" target="_blank">IDICORP Technologies</a></p>
+		            </div>
+					  
+   				</div>
+			</div>
+		</div> 
+</body>	
+</html>
